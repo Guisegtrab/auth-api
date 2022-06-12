@@ -3,5 +3,7 @@ export default {
   collectCoverage: true,
   coverageDirectory: "coverage",
   coverageProvider: "v8",
-  testEnvironment: "jest-environment-node",
-};
+  collectCoverageFrom: ["**/src/**/*.js"],
+  testEnvironment: "jest-environment-node"
+
+}

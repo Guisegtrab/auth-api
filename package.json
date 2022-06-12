@@ -7,7 +7,11 @@
   "scripts": {
     "startDev": "nodemon app.js",
     "start": "node app.js",
-    "test": "jest"
+    "test": "jest --silent --colors --watch --noStackTrace --passWithNoTests",
+    "test:unit": "npm test --watch -c jest-unit-config.js",
+    "test:integration": "npm test --watch -c jest-integration-config.js",
+    "test:staged": "npm test --findRelatedTests",
+    "test:ci": "npm test --coverage"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
